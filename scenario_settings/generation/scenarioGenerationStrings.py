@@ -1,10 +1,12 @@
+firstStringPreScenarioName = """
 #
 # Default settings for the simulation
 #
 
 ## Scenario settings
-Scenario.name = disaster_scenario
-Scenario.simulateConnections = true
+Scenario.name = """
+
+firstStringPostScenarioName = """Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
 # 43200s == 12h
 Scenario.endTime = 43200
@@ -67,23 +69,26 @@ Group.nrofHosts = 40
 
 ### group1 (pedestrians)
 Group1.groupID = pedestrian
-Group1.nrofHosts = 50
-Group1.nrofInterfaces = 1
+Group1.nrofHosts = """
+
+secondString = """Group1.nrofInterfaces = 1
 Group1.interface1 = bluetoothClassTwo
 
 ### group2 (emergency vehicles)
 Group2.groupID = emergency
 Group2.okMaps = 1
 Group2.speed = 2.7, 13.9
-Group2.nrofHosts = 50
-Group2.nrofInterfaces = 1
+Group2.nrofHosts = """
+
+thirdString = """Group2.nrofInterfaces = 1
 Group2.interface1 = wifi
 
 # group3 (drones)
 Group3.groupID = drone
 Group3.movementModel = RandomWaypoint
-Group3.nrofHosts = 50
-Group3.waitTime = 10, 30
+Group3.nrofHosts = """
+
+fourthString = """Group3.waitTime = 10, 30
 Group3.speed = 7, 10
 Group3.nrofInterfaces = 2
 Group3.interface1 = wifi
@@ -516,3 +521,4 @@ GUI.UnderlayImage.rotate = -0.015
 GUI.EventLogPanel.nrofEvents = 100
 # Regular Expression log filter (see Pattern-class from the Java API for RE-matching details)
 #GUI.EventLogPanel.REfilter = .*p[1-9]<->p[1-9]$
+"""

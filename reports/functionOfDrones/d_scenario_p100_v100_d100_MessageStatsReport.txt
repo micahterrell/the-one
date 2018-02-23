@@ -1,0 +1,20 @@
+Message stats for scenario d_scenario_p100_v100_d100
+sim_time: 43200.1000
+created: 1464
+started: 2572057
+relayed: 2520121
+aborted: 51892
+dropped: 2518975
+removed: 0
+delivered: 158
+delivery_prob: 0.1079
+response_prob: 0.0000
+overhead_ratio: 15949.1329
+latency_avg: 5176.7171
+latency_med: 4365.5000
+hopcount_avg: 11.8671
+hopcount_med: 5
+buffertime_avg: 38.3563
+buffertime_med: 10.3000
+rtt_avg: NaN
+rtt_med: NaN

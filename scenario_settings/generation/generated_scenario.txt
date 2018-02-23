@@ -1,9 +1,10 @@
+
 #
 # Default settings for the simulation
 #
 
 ## Scenario settings
-Scenario.name = disaster_scenario
+Scenario.name = [d_scenario_p50_v125_d125;d_scenario_p100_v100_d100;d_scenario_p150_v75_d75;d_scenario_p200_v50_d50;d_scenario_p125_v50_d125;d_scenario_p100_v100_d100;d_scenario_p75_v150_d75;d_scenario_p50_v200_d50;d_scenario_p125_v125_d50;d_scenario_p100_v100_d100;d_scenario_p75_v75_d150;d_scenario_p50_v50_d200]
 Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
 # 43200s == 12h
@@ -67,7 +68,7 @@ Group.nrofHosts = 40
 
 ### group1 (pedestrians)
 Group1.groupID = pedestrian
-Group1.nrofHosts = 50
+Group1.nrofHosts = [50;100;150;200;125;100;75;50;125;100;75;50]
 Group1.nrofInterfaces = 1
 Group1.interface1 = bluetoothClassTwo
 
@@ -75,14 +76,14 @@ Group1.interface1 = bluetoothClassTwo
 Group2.groupID = emergency
 Group2.okMaps = 1
 Group2.speed = 2.7, 13.9
-Group2.nrofHosts = 50
+Group2.nrofHosts = [125;100;75;50;50;100;150;200;125;100;75;50]
 Group2.nrofInterfaces = 1
 Group2.interface1 = wifi
 
 # group3 (drones)
 Group3.groupID = drone
 Group3.movementModel = RandomWaypoint
-Group3.nrofHosts = 50
+Group3.nrofHosts = [125;100;75;50;125;100;75;50;50;100;150;200]
 Group3.waitTime = 10, 30
 Group3.speed = 7, 10
 Group3.nrofInterfaces = 2
