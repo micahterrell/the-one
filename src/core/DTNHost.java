@@ -107,6 +107,10 @@ public class DTNHost implements Comparable<DTNHost> {
 		nextAddress = 0;
 	}
 
+	public String getName() {
+		return name;
+	}
+
 	/**
 	 * Returns true if this node is actively moving (false if not)
 	 * @return true if this node is actively moving (false if not)

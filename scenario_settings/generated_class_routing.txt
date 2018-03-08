@@ -4,7 +4,7 @@
 #
 
 ## Scenario settings
-Scenario.name = [d_scenario_p100_v100_d100]
+Scenario.name = [d_scenario_p50_v125_d125;d_scenario_p100_v100_d100;d_scenario_p150_v75_d75;d_scenario_p200_v50_d50;d_scenario_p125_v50_d125;d_scenario_p100_v100_d100;d_scenario_p75_v150_d75;d_scenario_p50_v200_d50;d_scenario_p125_v125_d50;d_scenario_p100_v100_d100;d_scenario_p75_v75_d150;d_scenario_p50_v50_d200]
 Scenario.simulateConnections = true
 Scenario.updateInterval = 0.1
 # 43200s == 12h
@@ -68,7 +68,7 @@ Group.nrofHosts = 40
 
 ### group1 (pedestrians)
 Group1.groupID = pedestrian
-Group1.nrofHosts = [100]
+Group1.nrofHosts = [50;100;150;200;125;100;75;50;125;100;75;50]
 Group1.nrofInterfaces = 1
 Group1.interface1 = bluetoothClassTwo
 Group1.router = PedestrianPriorityRouter
@@ -77,7 +77,7 @@ Group1.router = PedestrianPriorityRouter
 Group2.groupID = emergency
 Group2.okMaps = 1
 Group2.speed = 2.7, 13.9
-Group2.nrofHosts = [100]
+Group2.nrofHosts = [125;100;75;50;50;100;150;200;125;100;75;50]
 Group2.nrofInterfaces = 1
 Group2.interface1 = wifi
 Group2.router = VehiclePriorityRouter
@@ -85,7 +85,7 @@ Group2.router = VehiclePriorityRouter
 # group3 (drones)
 Group3.groupID = drone
 Group3.movementModel = RandomWaypoint
-Group3.nrofHosts = [100]
+Group3.nrofHosts = [125;100;75;50;125;100;75;50;50;100;150;200]
 Group3.waitTime = 10, 30
 Group3.speed = 7, 10
 Group3.nrofInterfaces = 2
@@ -461,7 +461,7 @@ Events1.interval = 25,35
 Events1.size = 500k,1M
 # range of message source/destination addresses
 ###VARIABLE
-Events1.hosts = 300,344
+Events1.hosts = 0,193
 # Message ID prefix
 Events1.prefix = M
 
@@ -485,7 +485,7 @@ MapBasedMovement.mapFile4 = data/shops.wkt
 ## Reports - all report names have to be valid report classes
 
 # how many reports to load
-Report.nrofReports = 3
+Report.nrofReports = 2
 # length of the warm up period (simulated seconds)
 Report.warmup = 0
 # default directory of reports (can be overridden per Report with output setting)
@@ -493,7 +493,6 @@ Report.reportDir = reports/
 # Report classes to load
 Report.report1 = MessageStatsReport
 Report.report2 = ContactTimesReport
-Report.report3 = MessagePathReport
 
 ## Default settings for some routers settings
 ProphetRouter.secondsInTimeUnit = 30

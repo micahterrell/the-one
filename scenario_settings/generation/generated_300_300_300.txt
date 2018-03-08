@@ -62,7 +62,7 @@ Group.waitTime = 0, 120
 # Walking speeds
 Group.speed = 0.5, 1.5
 # Message TTL of 300 minutes (5 hours)
-Group.msgTtl = 300
+Group.msgTtl = 30
 
 Group.nrofHosts = 40
 

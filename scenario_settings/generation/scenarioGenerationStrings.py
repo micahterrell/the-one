@@ -54,7 +54,7 @@ Scenario.nrofHostGroups = 47
 
 # Common settings for all groups
 Group.movementModel = ShortestPathMapBasedMovement
-Group.router = EpidemicRouter
+Group.router = StaticPriorityRouter
 Group.bufferSize = 5M
 Group.waitTime = 0, 120
 # All nodes have the bluetooth interface
@@ -73,6 +73,7 @@ Group1.nrofHosts = """
 
 secondString = """Group1.nrofInterfaces = 1
 Group1.interface1 = bluetoothClassTwo
+Group1.router = PedestrianPriorityRouter
 
 ### group2 (emergency vehicles)
 Group2.groupID = emergency
@@ -82,6 +83,7 @@ Group2.nrofHosts = """
 
 thirdString = """Group2.nrofInterfaces = 1
 Group2.interface1 = wifi
+Group2.router = VehiclePriorityRouter
 
 # group3 (drones)
 Group3.groupID = drone
@@ -93,6 +95,7 @@ Group3.speed = 7, 10
 Group3.nrofInterfaces = 2
 Group3.interface1 = wifi
 Group3.interface2 = bluetoothClassTwo
+Group3.router = DronePriorityRouter
 
 # group4 (static node 1 ) settings
 Group4.groupID = static1
@@ -486,7 +489,7 @@ MapBasedMovement.mapFile4 = data/shops.wkt
 ## Reports - all report names have to be valid report classes
 
 # how many reports to load
-Report.nrofReports = 2
+Report.nrofReports = 3
 # length of the warm up period (simulated seconds)
 Report.warmup = 0
 # default directory of reports (can be overridden per Report with output setting)
@@ -494,6 +497,7 @@ Report.reportDir = reports/
 # Report classes to load
 Report.report1 = MessageStatsReport
 Report.report2 = ContactTimesReport
+Report.report3 = MessagePathReport
 
 ## Default settings for some routers settings
 ProphetRouter.secondsInTimeUnit = 30
